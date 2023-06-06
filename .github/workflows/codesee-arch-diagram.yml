@@ -13,10 +13,11 @@ permissions: read-all
 
 jobs:
   codesee:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     continue-on-error: true
     name: Analyze the repo with CodeSee
     steps:
       - uses: Codesee-io/codesee-action@v2
         with:
           codesee-token: ${{ secrets.CODESEE_ARCH_DIAG_API_TOKEN }}
+          codesee-url: https://app.codesee.io
